@@ -55,6 +55,9 @@
 		65FB74C02BEAE66D00B89521 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		65FB74D42BEAEEC200B89521 /* EssentialFeedAPIEndToEndTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedAPIEndToEndTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65FB74D62BEAEEC200B89521 /* EssentialFeedAPIEndToEndTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedAPIEndToEndTests.swift; sourceTree = "<group>"; };
+		65FB74DF2BEAF26600B89521 /* CI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CI.xctestplan; sourceTree = "<group>"; };
+		65FB74E02BEAF2BE00B89521 /* EssentialFeed.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = EssentialFeed.xctestplan; sourceTree = "<group>"; };
+		65FB74E22BEAF39900B89521 /* EssentialFeedAPIEndToEndTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = EssentialFeedAPIEndToEndTests.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,7 @@
 				65FB74952BE51F3100B89521 /* EssentialFeed */,
 				65FB749F2BE51F3100B89521 /* EssentialFeedTests */,
 				65FB74D52BEAEEC200B89521 /* EssentialFeedAPIEndToEndTests */,
+				65FB74E12BEAF35700B89521 /* XCTestPlans */,
 				65FB74942BE51F3100B89521 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -158,6 +162,16 @@
 				65FB74D62BEAEEC200B89521 /* EssentialFeedAPIEndToEndTests.swift */,
 			);
 			path = EssentialFeedAPIEndToEndTests;
+			sourceTree = "<group>";
+		};
+		65FB74E12BEAF35700B89521 /* XCTestPlans */ = {
+			isa = PBXGroup;
+			children = (
+				65FB74E22BEAF39900B89521 /* EssentialFeedAPIEndToEndTests.xctestplan */,
+				65FB74DF2BEAF26600B89521 /* CI.xctestplan */,
+				65FB74E02BEAF2BE00B89521 /* EssentialFeed.xctestplan */,
+			);
+			path = XCTestPlans;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
