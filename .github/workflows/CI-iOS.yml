@@ -1,10 +1,9 @@
 name: CI-iOS
 
 # Controls when the action will run. 
-# Triggers the workflow on pull request events but only for the master branch.
+# Triggers the workflow on pull request events.
 on:
   pull_request:
-    branches: [ master ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -27,4 +26,4 @@ jobs:
       run: /usr/bin/xcodebuild -version
       
     - name: Build and Test
-      run: xcodebuild clean build test -workspace EssentialApp/EssentialApp.xcworkspace -scheme "CI_iOS" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 15 Pro,OS=17.4" ONLY_ACTIVE_ARCH=YES
+      run: xcodebuild clean build test -workspace EssentialApp/EssentialApp.xcworkspace -scheme "CI" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 15 Pro,OS=17.4" ONLY_ACTIVE_ARCH=YES
