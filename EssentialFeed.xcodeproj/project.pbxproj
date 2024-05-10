@@ -122,6 +122,7 @@
 		65FB749F2BE51F3100B89521 /* EssentialFeedTests */ = {
 			isa = PBXGroup;
 			children = (
+				65FB74BF2BEADD5700B89521 /* Helpers */,
 				65FB74E52BEE3F6300B89521 /* FeedCache */,
 				65FB74BA2BEA437800B89521 /* FeedAPI */,
 			);
@@ -146,7 +147,6 @@
 			children = (
 				65FB74B22BE5225F00B89521 /* LoadFeedFromRemoteUseCaseTests.swift */,
 				65FB74BB2BEA515000B89521 /* URLSessionHTTPClientTests.swift */,
-				65FB74BF2BEADD5700B89521 /* Helpers */,
 			);
 			path = FeedAPI;
 			sourceTree = "<group>";
