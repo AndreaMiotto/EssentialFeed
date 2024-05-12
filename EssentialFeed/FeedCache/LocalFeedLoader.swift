@@ -16,13 +16,22 @@ public final class LocalFeedLoader {
         return 7
     }
 
-    public typealias SaveResult = Error?
-    public typealias LoadResult = LoadFeedResult
-
     public init(store: FeedStore, currentDate: @escaping () -> Date) {
         self.store = store
         self.currentDate = currentDate
     }
+
+    private func validate(_ timestamp: Date) -> Bool {
+        let calendar = Calendar(identifier: .gregorian)
+        guard let maxCacheAge = calendar.date(byAdding: .day, value: maxCacheAgeInDays, to: timestamp) else {
+            return false
+        }
+        return currentDate() < maxCacheAge
+    }
+}
+
+extension LocalFeedLoader {
+    public typealias SaveResult = Error?
 
     public func save(_ feed: [FeedImage], completion: @escaping (SaveResult) -> Void) {
         store.deleteCachedFeed { [weak self] error in
@@ -42,6 +51,10 @@ public final class LocalFeedLoader {
             completion(error)
         }
     }
+}
+
+extension LocalFeedLoader: FeedLoader {
+    public typealias LoadResult = LoadFeedResult
 
     public func load(completion: @escaping (LoadResult) -> Void) {
         store.retrieve { [weak self] result in
@@ -68,14 +81,6 @@ public final class LocalFeedLoader {
             case .empty, .found: break
             }
         }
-    }
-
-    private func validate(_ timestamp: Date) -> Bool {
-        let calendar = Calendar(identifier: .gregorian)
-        guard let maxCacheAge = calendar.date(byAdding: .day, value: maxCacheAgeInDays, to: timestamp) else {
-            return false
-        }
-        return currentDate() < maxCacheAge
     }
 }
 
