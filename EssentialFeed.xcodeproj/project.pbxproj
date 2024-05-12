@@ -17,6 +17,8 @@
 		650E67732BF0FDDD00269C73 /* LoadFeedFromCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650E67722BF0FDDD00269C73 /* LoadFeedFromCacheUseCaseTests.swift */; };
 		650E67752BF0FE4800269C73 /* FeedStoreSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650E67742BF0FE4800269C73 /* FeedStoreSpy.swift */; };
 		650E67792BF10E8800269C73 /* ValidateFeedCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650E67782BF10E8800269C73 /* ValidateFeedCacheUseCaseTests.swift */; };
+		650E677B2BF1109300269C73 /* FeedCacheTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650E677A2BF1109300269C73 /* FeedCacheTestHelpers.swift */; };
+		650E677D2BF1113600269C73 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650E677C2BF1113600269C73 /* SharedTestHelpers.swift */; };
 		65FB749C2BE51F3100B89521 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FB74932BE51F3100B89521 /* EssentialFeed.framework */; };
 		65FB74A22BE51F3100B89521 /* EssentialFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = 65FB74962BE51F3100B89521 /* EssentialFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		65FB74AC2BE51F4C00B89521 /* FeedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB74AB2BE51F4C00B89521 /* FeedImage.swift */; };
@@ -62,6 +64,8 @@
 		650E67722BF0FDDD00269C73 /* LoadFeedFromCacheUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedFromCacheUseCaseTests.swift; sourceTree = "<group>"; };
 		650E67742BF0FE4800269C73 /* FeedStoreSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStoreSpy.swift; sourceTree = "<group>"; };
 		650E67782BF10E8800269C73 /* ValidateFeedCacheUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateFeedCacheUseCaseTests.swift; sourceTree = "<group>"; };
+		650E677A2BF1109300269C73 /* FeedCacheTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCacheTestHelpers.swift; sourceTree = "<group>"; };
+		650E677C2BF1113600269C73 /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
 		65FB74932BE51F3100B89521 /* EssentialFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65FB74962BE51F3100B89521 /* EssentialFeed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EssentialFeed.h; sourceTree = "<group>"; };
 		65FB749B2BE51F3100B89521 /* EssentialFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				650E67742BF0FE4800269C73 /* FeedStoreSpy.swift */,
+				650E677A2BF1109300269C73 /* FeedCacheTestHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -202,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				65FB74BD2BEADD5000B89521 /* XCTestCase+MemoryLeakTracking.swift */,
+				650E677C2BF1113600269C73 /* SharedTestHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -385,10 +391,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				650E677B2BF1109300269C73 /* FeedCacheTestHelpers.swift in Sources */,
 				650E67792BF10E8800269C73 /* ValidateFeedCacheUseCaseTests.swift in Sources */,
 				65FB74B32BE5225F00B89521 /* LoadFeedFromRemoteUseCaseTests.swift in Sources */,
 				65FB74BC2BEA515000B89521 /* URLSessionHTTPClientTests.swift in Sources */,
 				650E67752BF0FE4800269C73 /* FeedStoreSpy.swift in Sources */,
+				650E677D2BF1113600269C73 /* SharedTestHelpers.swift in Sources */,
 				65FB74E72BEE3F8600B89521 /* CacheFeedUseCaseTests.swift in Sources */,
 				65FB74BE2BEADD5000B89521 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				650E67732BF0FDDD00269C73 /* LoadFeedFromCacheUseCaseTests.swift in Sources */,
